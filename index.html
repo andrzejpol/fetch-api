@@ -8,7 +8,17 @@
 </head>
 
 <body>
-  <button>Kliknij mnie</button>
+  <form class="generator">
+    <label for="gender">Wybierz płeć: </label>
+    <select type="text" id="gender" name="gender">
+      <option value="both" selected>Wszyscy</option>
+      <option value="female">Kobiety</option>
+      <option value="male">Męzczyźni</option>
+    </select>
+    <label for="users-number">Liczba osób: </label>
+    <input type="text" id="users-number" name="users-number" value="10">
+    <input type="submit" value="Pobierz">
+  </form>
   <script src="main.js"></script>
 </body>
 
