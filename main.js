@@ -12,8 +12,22 @@ const fetchAPI = (e) => {
         return response.json();
       }
     })
-    .then(data => console.log(data))
+    .then(data => showUsers(data.results))
     .catch(error => console.log(error))
+}
+
+const showUsers = (users) => {
+  console.log(users)
+  const resultArea = document.querySelector('.users-list');
+  users.forEach(user => {
+    const person = document.createElement('div');
+    person.className = 'user';
+    person.innerHTML = `
+    <div class="user__name">${user.name.title.toUpperCase()} ${user.name.first.toUpperCase()} ${user.name.last.toUpperCase()}</div>
+    <img class="user__image" src=${user.picture.medium}>
+    `
+    resultArea.appendChild(person);
+  })
 }
 
 const button = document.querySelector('.generator');
