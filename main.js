@@ -19,6 +19,7 @@ const fetchAPI = (e) => {
 const showUsers = (users) => {
   console.log(users)
   const resultArea = document.querySelector('.users-list');
+  resultArea.innerText = "";
   users.forEach(user => {
     const person = document.createElement('div');
     person.className = 'user';
