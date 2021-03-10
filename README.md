@@ -1,3 +1,3 @@
 # Fetch api project
 
-Small application for testing an randomuser API. Made with JS and fetch method.
+Small application for testing the randomuser API. Made with JS and fetch method.
